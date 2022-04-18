@@ -85,7 +85,7 @@ class App extends Component {
         <ImageGallery images={images} onClick={this.toggleModal} />
         {isModalOpen && (
           <Modal onClose={this.toggleModal}>
-            <img src={largeImageURL} />
+            <img src={largeImageURL} alt="img" />
           </Modal>
         )}
 

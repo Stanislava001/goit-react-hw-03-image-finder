@@ -13,4 +13,4 @@ export const fetchImages = ({ searchQuery = '', page = 1, perPage = 12 }) => {
 };
 
 //res => res.data.images
-export default { fetchImages };
+export default fetchImages;

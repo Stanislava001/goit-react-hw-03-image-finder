@@ -5,9 +5,10 @@ import { IoIosSearch } from 'react-icons/io';
 import s from './Searchbar.module.css';
 
 class Searchbar extends Component {
-  static PropTypes = {
+  static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
+
   state = {
     query: '',
   };
@@ -19,7 +20,7 @@ class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { query } = this.state;
-    if (query == '') {
+    if (query === '') {
       toast.info('Type what you are looking for.', {
         position: toast.POSITION.TOP_RIGHT,
         theme: 'light',
