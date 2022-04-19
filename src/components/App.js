@@ -42,7 +42,7 @@ class App extends Component {
     this.setState({ isLoading: true });
 
     imagesApi
-      .fetchImages({ searchQuery, page, perPage })
+      .fetchImages(searchQuery, page, perPage)
       .then(images => {
         if (images.length === 0) {
           toast.error('Sorry, nothing found.', {
