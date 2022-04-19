@@ -39,10 +39,11 @@ class App extends Component {
 
   fetchImgs = () => {
     const { searchQuery, page, perPage } = this.state;
+    const options = { searchQuery, page, perPage };
     this.setState({ isLoading: true });
 
     imagesApi
-      .fetchImages(searchQuery, page, perPage)
+      .getImages(options)
       .then(images => {
         if (images.length === 0) {
           toast.error('Sorry, nothing found.', {
