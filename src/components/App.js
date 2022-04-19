@@ -24,7 +24,7 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
-      this.fetchImgs;
+      this.fetchImgs();
     }
   }
 
